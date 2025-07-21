@@ -308,8 +308,6 @@ const Contact = () => {
               </div>
             </div>
           </section>
-
-          
         </main>
 
         <Footer />

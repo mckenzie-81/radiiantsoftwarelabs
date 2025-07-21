@@ -68,24 +68,24 @@ const Contact = () => {
         <meta name="keywords" content="Contact, Support, Business Inquiries, Radiiant, Software, SaaS, Help" />
         <meta property="og:title" content="Contact Us | Radiiant Software Labs" />
         <meta property="og:description" content="Contact Radiiant Software Labs for business inquiries, support, or partnership opportunities. We're here to help you grow." />
-        <meta property="og:url" content="https://radiiantsoftwarelabs.com/contact" />
-        <meta property="og:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
+        <meta property="og:url" content="https://radiiantsoftwarelabs.com.com/contact" />
+        <meta property="og:image" content="https://radiiantsoftwarelabs.com.com/og-image.png" />
         <meta name="twitter:title" content="Contact Us | Radiiant Software Labs" />
         <meta name="twitter:description" content="Contact Radiiant Software Labs for business inquiries, support, or partnership opportunities. We're here to help you grow." />
-        <meta name="twitter:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
+        <meta name="twitter:image" content="https://radiiantsoftwarelabs.com.com/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{`
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Radiiant Software Labs",
-      "url": "https://radiiantsoftwarelabs.com/contact",
-      "logo": "https://radiiantsoftwarelabs.com/logo.png",
+      "url": "https://radiiantsoftwarelabs.com.com/contact",
+      "logo": "https://radiiantsoftwarelabs.com.com/logo.png",
       "contactPoint": [{
         "@type": "ContactPoint",
         "telephone": "+1-800-123-4567",
         "contactType": "Customer Service",
-        "email": "contact@radiiantsoftwarelabs.com"
+        "email": "contact@radiiantsoftwarelabs.com.com"
       }]
     }
   `}</script>
@@ -227,8 +227,8 @@ const Contact = () => {
                         icon: Mail,
                         title: 'Email us',
                         description: 'Send us an email anytime',
-                        info: 'contact@radiiant.site',
-                        action: 'mailto:contact@radiiant.site'
+                        info: 'contact@radiiantsoftwarelabs.com',
+                        action: 'mailto:contact@radiiantsoftwarelabs.com'
                       },
                       {
                         icon: Phone,

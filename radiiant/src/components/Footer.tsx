@@ -50,7 +50,7 @@ const Footer = () => {
     { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/Radiiant' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/Radiiant' },
     { name: 'GitHub', icon: Github, href: 'https://github.com/Radiiant' },
-    { name: 'Email', icon: Mail, href: 'mailto:contact@radiiant.site' }
+    { name: 'Email', icon: Mail, href: 'mailto:contact@radiiantsoftwarelabs.com' }
   ];
 
   // Newsletter state and handler

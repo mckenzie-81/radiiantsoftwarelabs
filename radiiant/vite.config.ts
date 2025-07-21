@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react()
   ].filter(Boolean),
-  base: process.env.VITE_BASE_PATH || "/radiiantsoftwarelabs",
+  base: process.env.VITE_BASE_PATH || "/radiiantsoftwarelabs.com",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

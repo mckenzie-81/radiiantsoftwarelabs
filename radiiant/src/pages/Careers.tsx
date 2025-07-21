@@ -177,19 +177,19 @@ const Careers: React.FC = () => {
         <meta name="keywords" content="Careers, Jobs, Hiring, Software, SaaS, Radiiant, Work With Us, Opportunities" />
         <meta property="og:title" content="Careers | Radiiant Software Labs" />
         <meta property="og:description" content="Join the Radiiant Software Labs team. Explore open positions and career opportunities in SaaS, software, and digital solutions." />
-        <meta property="og:url" content="https://radiiantsoftwarelabs.com/careers" />
-        <meta property="og:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
+        <meta property="og:url" content="https://radiiantsoftwarelabs.com.com/careers" />
+        <meta property="og:image" content="https://radiiantsoftwarelabs.com.com/og-image.png" />
         <meta name="twitter:title" content="Careers | Radiiant Software Labs" />
         <meta name="twitter:description" content="Join the Radiiant Software Labs team. Explore open positions and career opportunities in SaaS, software, and digital solutions." />
-        <meta name="twitter:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
+        <meta name="twitter:image" content="https://radiiantsoftwarelabs.com.com/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Radiiant Software Labs",
-            "url": "https://radiiantsoftwarelabs.com/careers",
-            "logo": "https://radiiantsoftwarelabs.com/logo.png"
+            "url": "https://radiiantsoftwarelabs.com.com/careers",
+            "logo": "https://radiiantsoftwarelabs.com.com/logo.png"
           }
         `}</script>
       </Helmet>

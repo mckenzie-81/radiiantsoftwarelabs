@@ -17,19 +17,19 @@ const Index = () => {
         <meta name="keywords" content="Radiiant, SaaS, Software, Automation, Web Development, AI, CRM, Booking, Business Solutions, Digital Transformation, Team, Portfolio, Careers, Pricing, Contact" />
         <meta property="og:title" content="Radiiant - Premium SaaS Solutions for Modern Business" />
         <meta property="og:description" content="Radiiant helps businesses streamline operations, boost engagement, and grow with smart tools and automation." />
-        <meta property="og:url" content="https://radiiantsoftwarelabs.com/" />
-        <meta property="og:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
+        <meta property="og:url" content="https://radiiantsoftwarelabs.com.com/" />
+        <meta property="og:image" content="https://radiiantsoftwarelabs.com.com/og-image.png" />
         <meta name="twitter:title" content="Radiiant - Premium SaaS Solutions for Modern Business" />
         <meta name="twitter:description" content="Radiiant helps businesses streamline operations, boost engagement, and grow with smart tools and automation." />
-        <meta name="twitter:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
+        <meta name="twitter:image" content="https://radiiantsoftwarelabs.com.com/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Radiiant Software Labs",
-            "url": "https://radiiantsoftwarelabs.com/",
-            "logo": "https://radiiantsoftwarelabs.com/logo.png"
+            "url": "https://radiiantsoftwarelabs.com.com/",
+            "logo": "https://radiiantsoftwarelabs.com.com/logo.png"
           }
         `}</script>
       </Helmet>

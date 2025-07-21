@@ -9,18 +9,18 @@ const Terms = () => {
       <Helmet>
         <title>Terms of Service | Radiiant Software Labs</title>
         <meta name="description" content="Review the terms of service for using Radiiant Software Labs products and services." />
-        <link rel="canonical" href="https://radiiant.site/terms" />
+        <link rel="canonical" href="https://radiiantsoftwarelabs.com/terms" />
         {/* Open Graph */}
         <meta property="og:title" content="Terms of Service | Radiiant Software Labs" />
         <meta property="og:description" content="Review the terms of service for using Radiiant Software Labs products and services." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://radiiant.site/terms" />
-        <meta property="og:image" content="https://radiiant.site/og-image.png" />
+        <meta property="og:url" content="https://radiiantsoftwarelabs.com/terms" />
+        <meta property="og:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Terms of Service | Radiiant Software Labs" />
         <meta name="twitter:description" content="Review the terms of service for using Radiiant Software Labs products and services." />
-        <meta name="twitter:image" content="https://radiiant.site/og-image.png" />
+        <meta name="twitter:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
         <meta name="twitter:site" content="@Radiiant_saas" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -89,8 +89,8 @@ const Terms = () => {
                   <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
                   <p className="text-muted-foreground leading-relaxed">
                     If you have any questions about these Terms of Service, please contact us at{' '}
-                    <a href="mailto:legal@radiiant.site" className="text-foreground hover:underline">
-                      legal@radiiant.site
+                    <a href="mailto:legal@radiiantsoftwarelabs.com" className="text-foreground hover:underline">
+                      legal@radiiantsoftwarelabs.com
                     </a>
                   </p>
                 </section>

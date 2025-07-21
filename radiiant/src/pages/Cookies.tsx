@@ -9,18 +9,18 @@ const Cookies = () => {
       <Helmet>
         <title>Cookie Policy | Radiiant Software Labs</title>
         <meta name="description" content="Learn how Radiiant Software Labs uses cookies to enhance your experience and protect your privacy." />
-        <link rel="canonical" href="https://radiiant.site/cookies" />
+        <link rel="canonical" href="https://radiiantsoftwarelabs.com/cookies" />
         {/* Open Graph */}
         <meta property="og:title" content="Cookie Policy | Radiiant Software Labs" />
         <meta property="og:description" content="Learn how Radiiant Software Labs uses cookies to enhance your experience and protect your privacy." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://radiiant.site/cookies" />
-        <meta property="og:image" content="https://radiiant.site/og-image.png" />
+        <meta property="og:url" content="https://radiiantsoftwarelabs.com/cookies" />
+        <meta property="og:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cookie Policy | Radiiant Software Labs" />
         <meta name="twitter:description" content="Learn how Radiiant Software Labs uses cookies to enhance your experience and protect your privacy." />
-        <meta name="twitter:image" content="https://radiiant.site/og-image.png" />
+        <meta name="twitter:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
         <meta name="twitter:site" content="@Radiiant_saas" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -96,8 +96,8 @@ const Cookies = () => {
                   <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
                   <p className="text-muted-foreground leading-relaxed">
                     If you have any questions about our use of cookies, please contact us at{' '}
-                    <a href="mailto:privacy@radiiant.site" className="text-foreground hover:underline">
-                      privacy@radiiant.site
+                    <a href="mailto:privacy@radiiantsoftwarelabs.com" className="text-foreground hover:underline">
+                      privacy@radiiantsoftwarelabs.com
                     </a>
                   </p>
                 </section>

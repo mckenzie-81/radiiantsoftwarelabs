@@ -22,18 +22,18 @@ const NotFound = () => {
         <title>404 Not Found | Radiiant Software Labs</title>
         <meta name="description" content="Sorry, the page you are looking for does not exist on Radiiant Software Labs." />
         <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://radiiant.site/" />
+        <link rel="canonical" href="https://radiiantsoftwarelabs.com/" />
         {/* Open Graph */}
         <meta property="og:title" content="404 Not Found | Radiiant Software Labs" />
         <meta property="og:description" content="Sorry, the page you are looking for does not exist on Radiiant Software Labs." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://radiiant.site/" />
-        <meta property="og:image" content="https://radiiant.site/og-image.png" />
+        <meta property="og:url" content="https://radiiantsoftwarelabs.com/" />
+        <meta property="og:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="404 Not Found | Radiiant Software Labs" />
         <meta name="twitter:description" content="Sorry, the page you are looking for does not exist on Radiiant Software Labs." />
-        <meta name="twitter:image" content="https://radiiant.site/og-image.png" />
+        <meta name="twitter:image" content="https://radiiantsoftwarelabs.com/og-image.png" />
         <meta name="twitter:site" content="@Radiiant_saas" />
       </Helmet>
       <div className="min-h-screen bg-background flex flex-col">

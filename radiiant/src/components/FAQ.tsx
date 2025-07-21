@@ -111,10 +111,10 @@ const FAQ = () => {
                 Get Started
               </a>
               <a 
-                href="mailto:contact@radiiant.site" 
+                href="mailto:contact@radiiantsoftwarelabs.com" 
                 className="text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
-                contact@radiiant.site
+                contact@radiiantsoftwarelabs.com
               </a>
             </div>
           </div>

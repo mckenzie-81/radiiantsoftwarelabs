@@ -309,25 +309,7 @@ const Contact = () => {
             </div>
           </section>
 
-          {/* Additional CTA */}
-          <section className="py-16 bg-muted/30">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-4">Prefer to schedule a call?</h2>
-                <p className="text-muted-foreground mb-8">
-                  Book a 30-minute demo call with our team to see Radiiant in action.
-                </p>
-                <Button size="lg" variant="outline">
-                  Schedule Demo Call
-                </Button>
-              </motion.div>
-            </div>
-          </section>
+          
         </main>
 
         <Footer />

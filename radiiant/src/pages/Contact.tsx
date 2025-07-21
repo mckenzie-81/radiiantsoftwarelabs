@@ -83,9 +83,16 @@ const Contact = () => {
       "logo": "https://radiiantsoftwarelabs.com.com/logo.png",
       "contactPoint": [{
         "@type": "ContactPoint",
-        "telephone": "+1-800-123-4567",
-        "contactType": "Customer Service",
-        "email": "contact@radiiantsoftwarelabs.com.com"
+        "telephone": "+1-800-555-0199",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "en"
+      },{
+        "@type": "ContactPoint",
+        "telephone": "+233-54-387-6146",
+        "contactType": "customer service",
+        "areaServed": "GH",
+        "availableLanguage": ["en", "Twi"]
       }]
     }
   `}</script>
@@ -220,57 +227,82 @@ const Contact = () => {
                   transition={{ duration: 0.8, delay: 0.4 }}
                   className="space-y-8"
                 >
-                  {/* Contact Cards */}
+                  {/* Contact Info Header */}
+                  <div>
+                    <h2 className="text-2xl font-bold mb-2">Our Offices</h2>
+                    <p className="text-muted-foreground">
+                      Find our team at our international headquarters.
+                    </p>
+                  </div>
+
+                  {/* Office Locations */}
                   <div className="space-y-6">
-                    {[
-                      {
-                        icon: Mail,
-                        title: 'Email us',
-                        description: 'Send us an email anytime',
-                        info: 'contact@radiiantsoftwarelabs.com',
-                        action: 'mailto:contact@radiiantsoftwarelabs.com'
-                      },
-                      {
-                        icon: Phone,
-                        title: 'Call us',
-                        description: 'Monday to Friday, 9am to 6pm PST',
-                        info: '+233 (543) 876-146',
-                        action: 'tel:+233543876146'
-                      },
-                      {
-                        icon: MapPin,
-                        title: 'Visit us',
-                        description: 'Our headquarters',
-                        info: 'Accra',
-                        action: '#'
-                      }
-                    ].map((contact, index) => (
-                      <motion.a
-                        key={index}
-                        href={contact.action}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                        className="block glass-card p-6 rounded-xl hover:shadow-medium transition-all duration-300 group"
-                      >
-                        <div className="flex items-start space-x-4">
-                          <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <contact.icon className="h-6 w-6 text-primary-foreground" />
+                    {/* US Office */}
+                    <div className="glass-card p-6 rounded-xl">
+                      <h3 className="font-bold text-lg mb-4 text-gradient">United States</h3>
+                      <div className="space-y-4">
+                        <a href="tel:+16469725340" className="flex items-start space-x-4 group">
+                          <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <Phone className="h-5 w-5 text-primary-foreground" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-foreground mb-1">
-                              {contact.title}
-                            </h3>
-                            <p className="text-sm text-muted-foreground mb-2">
-                              {contact.description}
-                            </p>
-                            <p className="text-foreground font-medium">
-                              {contact.info}
-                            </p>
+                            <p className="font-semibold text-foreground">Phone</p>
+                            <p className="text-muted-foreground text-sm">+1 (646) 972-5340</p>
+                          </div>
+                        </a>
+                        <div className="flex items-start space-x-4">
+                          <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0">
+                            <MapPin className="h-5 w-5 text-primary-foreground" />
+                          </div>
+                          <div>
+                            <p className="font-semibold text-foreground">Address</p>
+                            <p className="text-muted-foreground text-sm">123 Tech Way, Silicon Valley, CA</p>
                           </div>
                         </div>
-                      </motion.a>
-                    ))}
+                      </div>
+                    </div>
+
+                    {/* Ghana Office */}
+                    <div className="glass-card p-6 rounded-xl">
+                      <h3 className="font-bold text-lg mb-4 text-gradient">Ghana</h3>
+                      <div className="space-y-4">
+                        <a href="tel:+233543876146" className="flex items-start space-x-4 group">
+                          <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <Phone className="h-5 w-5 text-primary-foreground" />
+                          </div>
+                          <div>
+                            <p className="font-semibold text-foreground">Phone</p>
+                            <p className="text-muted-foreground text-sm">+233 (54) 387-6146</p>
+                          </div>
+                        </a>
+                        <div className="flex items-start space-x-4">
+                          <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0">
+                            <MapPin className="h-5 w-5 text-primary-foreground" />
+                          </div>
+                          <div>
+                            <p className="font-semibold text-foreground">Address</p>
+                            <p className="text-muted-foreground text-sm">East Legon, Accra</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* General Contact */}
+                  <div>
+                    <h2 className="text-2xl font-bold mb-4 pt-4">General Inquiries</h2>
+                    <a href="mailto:contact@radiiantsoftwarelabs.com" className="block glass-card p-6 rounded-xl hover:shadow-medium transition-all duration-300 group">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <Mail className="h-6 w-6 text-primary-foreground" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-foreground mb-1">Email us</h3>
+                          <p className="text-sm text-muted-foreground mb-2">For general questions or support</p>
+                          <p className="text-foreground font-medium">contact@radiiantsoftwarelabs.com</p>
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </motion.div>
               </div>

@@ -234,14 +234,14 @@ const Contact = () => {
                         icon: Phone,
                         title: 'Call us',
                         description: 'Monday to Friday, 9am to 6pm PST',
-                        info: '+1 (555) 123-4567',
-                        action: 'tel:+15551234567'
+                        info: '+233 (543) 876-146',
+                        action: 'tel:+233543876146'
                       },
                       {
                         icon: MapPin,
                         title: 'Visit us',
                         description: 'Our headquarters',
-                        info: 'San Francisco, CA',
+                        info: 'Accra',
                         action: '#'
                       }
                     ].map((contact, index) => (

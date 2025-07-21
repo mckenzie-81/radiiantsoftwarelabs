@@ -26,6 +26,12 @@ const WhatWeDo = () => {
       benefit: "Work smarter"
     },
     {
+      icon: Rocket,
+      title: "End-to-End Product Development",
+      description: "We partner with startups and scaleups to design, develop, and deliver launch-ready tools with speed and clarity.",
+      benefit: "Go from idea to launch"
+    },
+    {
       icon: Globe,
       title: "Custom Platforms & APIs",
       description: "Lead capture tools, web portals, and automation pipelines tailored to your business.",

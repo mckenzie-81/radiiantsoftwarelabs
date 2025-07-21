@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Check, Zap, Crown, Building } from 'lucide-react';
+import { Check, Zap, Crown, Building, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ServiceCategories = () => {
@@ -24,6 +24,13 @@ const ServiceCategories = () => {
       name: 'Business Systems',
       icon: Building,
       description: 'Custom CRM, POS, inventory, and workflow systems for your business.',
+      buttonText: 'Get a Quote',
+      href: '/contact',
+    },
+    {
+      name: 'End-to-End Product Development',
+      icon: Rocket,
+      description: 'We partner with startups and scaleups to design, develop, and deliver launch-ready tools with speed and clarity.',
       buttonText: 'Get a Quote',
       href: '/contact',
     },

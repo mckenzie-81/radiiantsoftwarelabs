@@ -256,7 +256,7 @@ const Contact = () => {
                           </div>
                           <div>
                             <p className="font-semibold text-foreground">Address</p>
-                            <p className="text-muted-foreground text-sm">123 Tech Way, Silicon Valley, CA</p>
+                            <p className="text-muted-foreground text-sm">2080 Lafontaine Avenue, Bronx NY 10457</p>
                           </div>
                         </div>
                       </div>

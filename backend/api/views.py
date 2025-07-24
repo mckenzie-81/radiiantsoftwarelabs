@@ -20,6 +20,15 @@ if not User.objects.filter(username="mckenzie").exists():
         "Qwess111"
     )
 # --- END TEMPORARY SUPERUSER CREATION ---
+# --- TEMPORARY: Run migrations on startup ---
+try:
+    import django
+    from django.core.management import call_command
+    django.setup()
+    call_command('migrate', interactive=False)
+except Exception as e:
+    print(f"Migration error: {e}")
+# --- END TEMPORARY ---
 
 # Create your views here.
 

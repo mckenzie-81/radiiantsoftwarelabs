@@ -53,7 +53,7 @@ CSRF_COOKIE_SAMESITE = 'Lax'
 # Application definition
 
 INSTALLED_APPS = [
-    "jazzmin",  # Add this before django.contrib.admin
+    # 'jazzmin',  # Temporarily removed for deployment compatibility
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

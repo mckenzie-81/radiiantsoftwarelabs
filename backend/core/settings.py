@@ -25,7 +25,11 @@ SECRET_KEY = "django-insecure-_q1u(cr33xm_!f$711*zg-pibai$xuav*dhli#@r(0mz5p0ui)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = [
+    "your-backend-service.onrender.com",  # your actual Render backend URL
+    "radiiantsoftwarelabs.com",
+    "www.radiiantsoftwarelabs.com",
+]
 
 # Security Settings
 SECURE_BROWSER_XSS_FILTER = True
@@ -65,6 +69,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # Whitenoise for static files
     "django.contrib.sessions.middleware.SessionMiddleware",
     "corsheaders.middleware.CorsMiddleware",  # Add CORS middleware near the top
     "django.middleware.common.CommonMiddleware",
@@ -166,12 +171,13 @@ REST_FRAMEWORK = {
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",
-    "http://127.0.0.1:8080",
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "https://your-vercel-app.vercel.app",
-    "https://www.yourfrontenddomain.com",
+    "https://radiiantsoftwarelabs.vercel.app",
+    "https://radiiantsoftwarelabs.com",
+    "https://www.radiiantsoftwarelabs.com",
+]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.radiiantsoftwarelabs\.com$",
 ]
 
 # Jazzmin Configuration
@@ -337,3 +343,5 @@ JAZZMIN_UI_TWEAKS = {
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SESSION_COOKIE_AGE = 600  # 10 minutes
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

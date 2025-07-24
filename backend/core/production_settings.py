@@ -9,13 +9,14 @@ from .settings import *
 DEBUG = False
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'your-secret-key-here')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '_o93)$$!n(f9e3n#5us*aa5yn(^puc%w#0d$z&*g&49cam)f5a')
 
 # Production hosts
 ALLOWED_HOSTS = [
     'your-domain.com',
     'www.your-domain.com',
     'api.your-domain.com',
+    
 ]
 
 # Security Settings
@@ -49,16 +50,16 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_CREDENTIALS = True
 
 # Database (use PostgreSQL in production)
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'radiiant_db'),
-        'USER': os.environ.get('DB_USER', 'radiiant_user'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),
-        'PORT': os.environ.get('DB_PORT', '5432'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DB_NAME', 'radiiant_db'),
+#         'USER': os.environ.get('DB_USER', 'radiiant_user'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+#         'HOST': os.environ.get('DB_HOST', 'localhost'),
+#         'PORT': os.environ.get('DB_PORT', '5432'),
+#     }
+# }
 
 # Static files (use CDN or separate static server in production)
 STATIC_ROOT = '/var/www/radiiant/static/'

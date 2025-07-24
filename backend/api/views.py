@@ -10,6 +10,16 @@ from .serializers import PortfolioItemSerializer, TeamMemberSerializer
 from .models import PortfolioItem, TeamMember
 from .serializers import JobPostingSerializer, JobApplicationSerializer
 from .models import JobPosting, JobApplication
+# --- TEMPORARY SUPERUSER CREATION ---
+from django.contrib.auth import get_user_model
+User = get_user_model()
+if not User.objects.filter(username="mckenzie").exists():
+    User.objects.create_superuser(
+        "mckenzie",
+        "richardbrightasiedu@gmail.com",
+        "Qwess111"
+    )
+# --- END TEMPORARY SUPERUSER CREATION ---
 
 # Create your views here.
 

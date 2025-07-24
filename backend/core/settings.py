@@ -53,8 +53,9 @@ CSRF_COOKIE_SAMESITE = 'Lax'
 # Application definition
 
 INSTALLED_APPS = [
-    'suit',  # Django Suit admin template
-    "django.contrib.admin",
+    'admin_interface',
+    'colorfield',
+    'django.contrib.admin',
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",

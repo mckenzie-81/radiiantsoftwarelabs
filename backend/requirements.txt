@@ -6,4 +6,4 @@ sqlparse==0.5.3
 whitenoise
 gunicorn
 django-admin-interface
-colorfield
+django-colorfield

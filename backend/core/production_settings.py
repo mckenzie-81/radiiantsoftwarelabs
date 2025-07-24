@@ -13,10 +13,9 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '_o93)$$!n(f9e3n#5us*aa5yn(^puc
 
 # Production hosts
 ALLOWED_HOSTS = [
-    'your-domain.com',
-    'www.your-domain.com',
-    'api.your-domain.com',
-    
+    "rslwebsite.onrender.com",
+    "radiiantsoftwarelabs.com",
+    "www.radiiantsoftwarelabs.com",
 ]
 
 # Security Settings
@@ -43,8 +42,9 @@ CSRF_COOKIE_SAMESITE = 'Strict'
 
 # CORS Settings (restrict for production)
 CORS_ALLOWED_ORIGINS = [
-    "https://your-domain.com",
-    "https://www.your-domain.com",
+    "https://radiiantsoftwarelabs.vercel.app",
+    "https://radiiantsoftwarelabs.com",
+    "https://www.radiiantsoftwarelabs.com",
 ]
 
 CORS_ALLOW_CREDENTIALS = True

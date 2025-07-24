@@ -5,7 +5,7 @@ const Team = () => {
   const [team, setTeam] = useState([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/team/`)
+    fetch(`${import.meta.env.VITE_API_URL}/team/`)
       .then(res => res.json())
       .then(data => setTeam(data));
   }, []);

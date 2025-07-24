@@ -63,7 +63,7 @@ const Footer = () => {
     setNewsletterStatus('loading');
     setNewsletterMessage('');
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/newsletter/`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/newsletter/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: newsletterEmail }),

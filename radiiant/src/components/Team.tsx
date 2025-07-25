@@ -30,8 +30,8 @@ const team = [
     name: "Michael Achel",
     role: "Founding Engineer & Technical Lead",
     blurb: "Expert technical lead, driving robust engineering practices and delivering reliable, high-performance solutions for every project.",
-    image: "/static/team_photos/michael.png",
-    linkedin: "https://linkedin.com/in/michael.jpeg"
+    image: "/static/team_photos/michael.jpeg",
+    linkedin: "https://linkedin.com/in/michael-achel"
   },
 ];
 

@@ -2,6 +2,12 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+const mobileAvatars = [
+  { src: '/hero-item2.png', alt: 'Richard', style: { left: '10%', bottom: '30%' } },
+  { src: '/rightonhero.png', alt: 'Darline', style: { right: '10%', bottom: '45%' } },
+  // { src: '/static/team_photos/kojo.png', alt: 'Kojo', style: { left: '50%', bottom: '5%' } },
+];
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
@@ -40,6 +46,22 @@ const Hero = () => {
           className="absolute top-40 right-8 w-60 opacity-80"
           style={{ transform: 'rotate(12deg)' }}
         />
+      </div>
+
+      {/* Animated floating avatars for mobile only */}
+      <div className="md:hidden absolute inset-0 pointer-events-none z-20">
+        {mobileAvatars.map((avatar, idx) => (
+          <motion.img
+            key={avatar.alt}
+            src={avatar.src}
+            alt={avatar.alt}
+            className="w-16 h-16 shadow-lg absolute"
+            style={avatar.style}
+            initial={{ y: 0 }}
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 5 + idx, repeat: Infinity, repeatType: "loop" }}
+          />
+        ))}
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 const mobileAvatars = [
   { src: '/hero-item2.png', alt: 'Richard', style: { left: '10%', bottom: '30%' } },
-  { src: '/rightonhero.png', alt: 'Darline', style: { right: '10%', bottom: '45%' } },
+  { src: '/rightonhero.png', alt: 'Darline', style: { right: '10%', bottom: '40%' } },
   // { src: '/static/team_photos/kojo.png', alt: 'Kojo', style: { left: '50%', bottom: '5%' } },
 ];
 

@@ -74,7 +74,7 @@ def team_list(request):
             "name": "Darline Konadu Amoafo",
             "role": "Executive Assistant",
             "blurb": "Keeps the team organized and operations running smoothly, ensuring every detail is handled with care and efficiency.",
-            "image_url": "https://rslwebsite.onrender.com/static/team_photos/darlinepng.png",
+            "image_url": "backend/media/team_photos/darlinepng.png",
             "linkedin": "https://linkedin.com/in/darlineamoafo"
         },
         {
@@ -82,7 +82,7 @@ def team_list(request):
             "name": "Kojo Q. Mensah",
             "role": "Co-Owner",
             "blurb": "Strategic co-owner, dedicated to fostering innovation and growth through strong partnerships and a commitment to client success.",
-            "image_url": "https://rslwebsite.onrender.com/static/team_photos/jojo.png",
+            "image_url": "/team_photos/IMG_2507_2.JPG",
             "linkedin": "https://linkedin.com/in/kojoqmensah"
         },
         {

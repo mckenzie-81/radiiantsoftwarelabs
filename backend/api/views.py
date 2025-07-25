@@ -59,44 +59,6 @@ def portfolio_list(request):
     return Response(serializer.data)
 
 @api_view(["GET"])
-def team_list(request):
-    team = [
-        {
-            "id": 1,
-            "name": "Richard Bright Asiedu-Bentum",
-            "role": "Founder & Lead Engineer",
-            "blurb": "Visionary founder, passionate about building smart, scalable solutions and beautiful digital experiences.",
-            "image_url": "https://rslwebsite.onrender.com/static/team_photos/richard.png",
-            "linkedin": "https://linkedin.com/in/richardbrightasiedu"
-        },
-        {
-            "id": 2,
-            "name": "Darline Konadu Amoafo",
-            "role": "Executive Assistant",
-            "blurb": "Keeps the team organized and operations running smoothly, ensuring every detail is handled with care and efficiency.",
-            "image_url": "backend/media/team_photos/darlinepng.png",
-            "linkedin": "https://linkedin.com/in/darlineamoafo"
-        },
-        {
-            "id": 3,
-            "name": "Kojo Q. Mensah",
-            "role": "Co-Owner",
-            "blurb": "Strategic co-owner, dedicated to fostering innovation and growth through strong partnerships and a commitment to client success.",
-            "image_url": "/team_photos/IMG_2507_2.JPG",
-            "linkedin": "https://linkedin.com/in/kojoqmensah"
-        },
-        {
-            "id": 4,
-            "name": "Michael Achel",
-            "role": "Founding Engineer & Technical Lead",
-            "blurb": "Expert technical lead, driving robust engineering practices and delivering reliable, high-performance solutions for every project.",
-            "image_url": "https://rslwebsite.onrender.com/static/team_photos/michael.jpeg",
-            "linkedin": "https://linkedin.com/in/michaelachel"
-        },
-    ]
-    return Response(team)
-
-@api_view(["GET"])
 def job_listings(request):
     jobs = JobPosting.objects.filter(is_active=True)
     serializer = JobPostingSerializer(jobs, many=True)

@@ -186,11 +186,3 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SESSION_COOKIE_AGE = 600  # 10 minutes
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-# Email Configuration (Gmail SMTP)
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.environ.get('GMAIL_USER', 'radiiant.solutions@gmail.com')
-EMAIL_HOST_PASSWORD = os.environ.get('GMAIL_APP_PASSWORD', 'wffp azwh rdgl vwfe')

@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet-async';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,31 +32,34 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          full_name: formData.fullName,
-          email: formData.email,
-          company: formData.company,
-          message: formData.message,
-        }),
-      });
+      // EmailJS configuration
+      const templateParams = {
+        name: formData.fullName,
+        email: formData.email,
+        company: formData.company,
+        message: formData.message,
+        time: new Date().toLocaleString()
+      };
 
-      if (response.ok) {
-    setIsSubmitted(true);
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        templateParams,
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      );
+
+      if (result.status === 200) {
+        setIsSubmitted(true);
         setFormData({ fullName: '', email: '', company: '', message: '' });
-        // Optionally, show a toast or notification here
       } else {
-        const errorData = await response.json();
-        alert('Submission failed: ' + JSON.stringify(errorData));
+        alert('Email sending failed. Please try again.');
       }
     } catch (error) {
-      alert('An error occurred: ' + error);
+      console.error('Email error:', error);
+      alert('An error occurred while sending the email. Please try again.');
     } finally {
-    setIsSubmitting(false);
+      setIsSubmitting(false);
       setTimeout(() => setIsSubmitted(false), 3000);
     }
   };

@@ -1,0 +1,11 @@
+# Django Settings
+DJANGO_SETTINGS_MODULE=core.production_settings
+DJANGO_SECRET_KEY=your-very-secret-key-here
+
+# Admin Settings
+ADMIN_URL=admin/
+
+# Gmail SMTP Configuration
+GMAIL_USER=your-email@gmail.com
+GMAIL_APP_PASSWORD=your-16-character-app-password
+ADMIN_EMAIL=richardbrightasiedu@gmail.com 

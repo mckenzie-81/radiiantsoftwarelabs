@@ -49,7 +49,7 @@ const Hero = () => {
       </div>
 
       {/* Animated floating avatars for mobile only */}
-      <div className="md:hidden absolute inset-0 pointer-events-none z-20">
+      {/* <div className="md:hidden absolute inset-0 pointer-events-none z-20">
         {mobileAvatars.map((avatar, idx) => (
           <motion.img
             key={avatar.alt}
@@ -62,7 +62,7 @@ const Hero = () => {
             transition={{ duration: 5 + idx, repeat: Infinity, repeatType: "loop" }}
           />
         ))}
-      </div>
+      </div> */}
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div

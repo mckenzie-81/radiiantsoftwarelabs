@@ -8,12 +8,12 @@ import { Label } from '@/components/ui/label';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Helmet } from 'react-helmet-async';
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
+    phone: '',
     company: '',
     message: ''
   });
@@ -32,32 +32,30 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // EmailJS configuration
-      const templateParams = {
-        name: formData.fullName,
-        email: formData.email,
-        company: formData.company,
-        message: formData.message,
-        time: new Date().toLocaleString()
-      };
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          full_name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.message,
+        }),
+      });
 
-      // Send email using EmailJS
-      const result = await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-        templateParams,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
-      );
-
-      if (result.status === 200) {
+      if (response.ok) {
         setIsSubmitted(true);
-        setFormData({ fullName: '', email: '', company: '', message: '' });
+        setFormData({ fullName: '', email: '', phone: '', company: '', message: '' });
       } else {
-        alert('Email sending failed. Please try again.');
+        const errorData = await response.json();
+        alert('Submission failed: ' + JSON.stringify(errorData));
       }
     } catch (error) {
-      console.error('Email error:', error);
-      alert('An error occurred while sending the email. Please try again.');
+      console.error('Submission error:', error);
+      alert('An error occurred while submitting the form. Please try again.');
     } finally {
       setIsSubmitting(false);
       setTimeout(() => setIsSubmitted(false), 3000);
@@ -162,6 +160,18 @@ const Contact = () => {
                             onChange={handleInputChange}
                             placeholder="john@company.com"
                             required
+                            className="h-12"
+                          />
+                        </div>
+
+                        <div className="space-y-2">
+                          <Label htmlFor="phone">Phone Number</Label>
+                          <Input
+                            id="phone"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            placeholder="123-456-7890"
                             className="h-12"
                           />
                         </div>

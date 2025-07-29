@@ -12,26 +12,6 @@ from .serializers import JobPostingSerializer, JobApplicationSerializer
 from .models import JobPosting, JobApplication
 import os
 from django.core.mail import send_mail
-from django.conf import settings
-# --- TEMPORARY SUPERUSER CREATION ---
-from django.contrib.auth import get_user_model
-User = get_user_model()
-if not User.objects.filter(username="mckenzie").exists():
-    User.objects.create_superuser(
-        "mckenzie",
-        "richardbrightasiedu@gmail.com",
-        "Qwess111"
-    )
-# --- END TEMPORARY SUPERUSER CREATION ---
-# --- TEMPORARY: Run migrations on startup ---
-try:
-    import django
-    from django.core.management import call_command
-    django.setup()
-    call_command('migrate', interactive=False)
-except Exception as e:
-    print(f"Migration error: {e}")
-# --- END TEMPORARY ---
 
 # Create your views here.
 
@@ -43,8 +23,39 @@ def hello_world(request):
 def submit_contact(request):
     serializer = ContactSubmissionSerializer(data=request.data)
     if serializer.is_valid():
-        serializer.save()
-        return Response({"success": True, "message": "Submission received."}, status=status.HTTP_201_CREATED)
+        contact = serializer.save()
+        
+        # Send email notification
+        try:
+            subject = f"New Contact Form Submission from {contact.full_name}"
+            message = f"""
+New contact form submission received:
+
+Name: {contact.full_name}
+Email: {contact.email}
+Phone: {contact.phone}
+Company: {contact.company}
+Message: {contact.message}
+
+Submitted at: {contact.submitted_at}
+            """
+            
+            # Send email to admin
+            send_mail(
+                subject=subject,
+                message=message,
+                from_email=os.environ.get('GMAIL_USER', 'radiiant.solutions@gmail.com'),
+                recipient_list=[os.environ.get('ADMIN_EMAIL', 'richardbrightasiedu@gmail.com')],
+                fail_silently=False,
+            )
+            
+            return Response({"success": True, "message": "Submission received and notification sent."}, status=status.HTTP_201_CREATED)
+            
+        except Exception as e:
+            # If email fails, still save the contact but log the error
+            print(f"Email sending failed: {e}")
+            return Response({"success": True, "message": "Submission received. Email notification failed."}, status=status.HTTP_201_CREATED)
+    
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(["POST"])

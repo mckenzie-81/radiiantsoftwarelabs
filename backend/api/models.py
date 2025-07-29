@@ -6,6 +6,7 @@ from django.conf import settings
 class ContactSubmission(models.Model):
     full_name = models.CharField(max_length=255)
     email = models.EmailField()
+    phone = models.CharField(max_length=20, blank=True)
     company = models.CharField(max_length=255, blank=True)
     message = models.TextField()
     submitted_at = models.DateTimeField(auto_now_add=True)

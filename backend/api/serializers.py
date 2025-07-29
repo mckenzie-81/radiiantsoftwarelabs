@@ -9,7 +9,7 @@ from .models import JobApplication
 class ContactSubmissionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactSubmission
-        fields = ['id', 'full_name', 'email', 'company', 'message', 'submitted_at']
+        fields = ['id', 'full_name', 'email', 'phone', 'company', 'message', 'submitted_at']
 
 class NewsletterSubscriberSerializer(serializers.ModelSerializer):
     class Meta:

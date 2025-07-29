@@ -36,12 +36,36 @@ def submit_contact(request):
         if serializer.is_valid():
             contact = serializer.save()
             
-            # Temporarily disable email to test basic functionality
+            # Send email notification
             try:
-                return Response({"success": True, "message": "Submission received."}, status=status.HTTP_201_CREATED)
+                subject = f"New Contact Form Submission from {contact.full_name}"
+                message = f"""
+New contact form submission received:
+
+Name: {contact.full_name}
+Email: {contact.email}
+Phone: {contact.phone}
+Company: {contact.company}
+Message: {contact.message}
+
+Submitted at: {contact.submitted_at}
+                """
+                
+                # Send email to admin
+                send_mail(
+                    subject=subject,
+                    message=message,
+                    from_email=os.environ.get('GMAIL_USER', 'radiiant.solutions@gmail.com'),
+                    recipient_list=[os.environ.get('ADMIN_EMAIL', 'richardbrightasiedu@gmail.com')],
+                    fail_silently=False,
+                )
+                
+                return Response({"success": True, "message": "Submission received and notification sent."}, status=status.HTTP_201_CREATED)
+                
             except Exception as e:
-                print(f"Error: {e}")
-                return Response({"success": True, "message": "Submission received."}, status=status.HTTP_201_CREATED)
+                # If email fails, still save the contact but log the error
+                print(f"Email sending failed: {e}")
+                return Response({"success": True, "message": "Submission received. Email notification failed."}, status=status.HTTP_201_CREATED)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     except Exception as e:

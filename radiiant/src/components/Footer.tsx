@@ -7,31 +7,31 @@ const Footer = () => {
     {
       title: 'Company',
       links: [
-        { name: 'About', href: '#about' },
-        { name: 'Blog', href: '/blog' },
+        { name: 'About', href: '/about' },
+        // { name: 'Blog', href: '/blog' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Press', href: '/press' },
+        // { name: 'Press', href: '/press' },
         { name: 'Contact', href: '/contact' }
       ]
     },
     {
       title: 'Product',
       links: [
-        { name: 'Features', href: '#services' },
+        { name: 'Features', href: '/services' },
         { name: 'Pricing', href: '/pricing' },
-        { name: 'API Docs', href: '/docs' },
+        // { name: 'API Docs', href: '/docs' },
         { name: 'Integrations', href: '/pricing' },
-        { name: 'Changelog', href: '/changelog' }
+        // { name: 'Changelog', href: '/changelog' }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Help Center', href: '/help' },
-        { name: 'Community', href: '/community' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Status', href: '/status' }
+        // { name: 'Documentation', href: '/docs' },
+        { name: 'Help Center', href: '/contact' },
+        // { name: 'Community', href: '/community' },
+        // { name: 'Webinars', href: '/webinars' },
+        // { name: 'Status', href: '/status' }
       ]
     },
     {
@@ -40,8 +40,8 @@ const Footer = () => {
         { name: 'Privacy Policy', href: '/privacy' },
         { name: 'Terms of Service', href: '/terms' },
         { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'GDPR', href: '/gdpr' },
-        { name: 'Security', href: '/security' }
+        // { name: 'GDPR', href: '/gdpr' },
+        // { name: 'Security', href: '/security' }
       ]
     }
   ];
